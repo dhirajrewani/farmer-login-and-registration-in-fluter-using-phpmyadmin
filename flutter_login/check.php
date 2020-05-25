@@ -11,12 +11,12 @@
         $cek = mysqli_fetch_array($query);
 
         if(isset($cek) && $cek != null){
-            $data['msg'] = "DATA ADA";
+            $data['msg'] = "DATA There is";
             $data['level'] = $cek['level'];
             $data['username'] = $cek['username'];
             echo json_encode($data);
         }else{
-            $data['msg'] = "DATA TIDAK ADA";
+            $data['msg'] = "DATA Not There is";
             echo json_encode($data);
         }
     }
